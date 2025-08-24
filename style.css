@@ -422,3 +422,149 @@ body.video-page {
     color: #aaa;
     display: block;
 }
+
+/* --- Public Profile Page Styles --- */
+
+.public-profile-page {
+    /* As requested, a background image can be placed here */
+    /* For now, a dark gradient to match the theme */
+    background: linear-gradient(to bottom, #2a2a2a, #121212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form-toggle {
+    display: flex;
+    border: 1px solid #333;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 12px;
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-btn.active {
+    background-color: #ffffff;
+    color: #121212;
+    font-weight: 500;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #ffffff;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #121212;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* --- Public Profile Home Page Styles --- */
+
+.profile-home-container {
+    padding: 20px;
+}
+
+.profile-summary {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2a2a2a;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-bottom: 15px;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+.watched-videos-summary {
+    font-size: 16px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    background: #333;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.watched-videos-list h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}

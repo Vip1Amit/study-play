@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Study Play</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="public-profile-home-page">
+    <header class="main-header">
+        <div class="logo">
+            <h1>study <span class="logo-light">play</span></h1>
+        </div>
+    </header>
+
+    <main class="profile-home-container">
+        <section class="profile-summary">
+            <img src="https://via.placeholder.com/80" alt="Profile Picture" class="profile-avatar">
+            <h2 id="profile-name" class="profile-name">User Name</h2>
+            <div id="watched-videos-summary" class="watched-videos-summary">
+                <span class="watched-count">0</span> Watched Videos
+            </div>
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </section>
+
+        <section id="watched-videos-list" class="watched-videos-list">
+            <h3>Watched History</h3>
+            <a href="video-play.html" class="video-card-link">
+                <div class="video-card">
+                    <div class="thumbnail-placeholder"></div>
+                    <div class="video-details">
+                        <h3 class="video-title">A Video That Was Watched</h3>
+                        <div class="video-meta">
+                            <span>1M views</span>
+                            <span>&bull;</span>
+                            <span>100K likes</span>
+                            <span>&bull;</span>
+                            <span>2 weeks ago</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer class="bottom-nav">
+        <a href="index.html" class="bottom-nav-item">
+            <span class="material-icons">home</span>
+            <span class="nav-text">Home</span>
+        </a>
+        <a href="#" class="bottom-nav-item">
+            <span class="material-icons">search</span>
+            <span class="nav-text">Search</span>
+        </a>
+        <a href="#" class="bottom-nav-item">
+            <span class="material-icons">settings</span>
+            <span class="nav-text">Settings</span>
+        </a>
+        <a href="public-profile.html" id="profile-nav-link" class="bottom-nav-item active">
+            <span class="material-icons">person</span>
+            <span class="nav-text">Profile</span>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
