@@ -66,4 +66,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         scrollContainer.style.cursor = 'grab';
     }
+
+    // --- Video Description Toggle ---
+    const titleToggle = document.getElementById('video-title-toggle');
+    const descriptionBox = document.getElementById('video-description');
+
+    if (titleToggle && descriptionBox) {
+        titleToggle.addEventListener('click', () => {
+            descriptionBox.classList.toggle('show');
+            const icon = titleToggle.querySelector('.material-icons');
+            if (icon) {
+                // We'll add a 'rotated' class to handle the animation in CSS
+                icon.classList.toggle('rotated');
+            }
+        });
+    }
 });

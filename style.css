@@ -95,6 +95,11 @@ body {
     padding: 10px;
 }
 
+.video-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .video-card {
     margin-bottom: 25px;
 }
@@ -164,4 +169,256 @@ body {
 
 .nav-text {
     font-size: 12px;
+}
+
+/* --- Video Play Page Styles --- */
+
+/* Override body padding for video page */
+body.video-page {
+    padding-top: 0; /* No top padding as the video is at the top */
+}
+
+.video-page-header {
+    position: absolute; /* Over the video */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1010;
+    padding: 10px;
+}
+
+.back-button {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-player-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    background-color: #000;
+}
+
+.video-player-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.video-player-placeholder::before {
+    content: 'Video Player';
+}
+
+.video-play-container {
+    padding-bottom: 60px; /* Space for bottom nav */
+}
+
+.ad-banner-container {
+    background-color: #1f1f1f;
+    margin: 10px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.ad-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.ad-link-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.ad-content {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.ad-dismiss-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: rgba(0,0,0,0.7);
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px;
+    line-height: 0;
+}
+.ad-dismiss-btn .material-icons {
+    font-size: 16px;
+}
+
+.ad-image {
+    border-radius: 8px;
+}
+
+.video-info {
+    padding: 10px;
+}
+
+.video-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.video-title-container .material-icons {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+.video-title-container .material-icons.rotated {
+    transform: rotate(180deg);
+}
+
+.video-title-main {
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.video-description-box {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ddd;
+    display: none; /* Hidden by default */
+}
+.video-description-box.show {
+    display: block;
+}
+
+.video-actions-bar {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.video-actions-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.actions-scroll {
+    display: flex;
+    gap: 10px;
+    padding: 15px 0;
+}
+
+.action-btn {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.uploader-info-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.uploader-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.uploader-details {
+    flex-grow: 1;
+}
+
+.uploader-name {
+    font-weight: 500;
+    display: block;
+}
+
+.uploader-followers {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.follow-btn {
+    background-color: #fff;
+    color: #121212;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.related-videos {
+    padding: 10px;
+}
+
+.related-videos h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.related-video-card {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.related-thumbnail {
+    width: 160px;
+    height: 90px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.related-video-details {
+    flex-grow: 1;
+}
+
+.related-video-title {
+    font-size: 15px;
+    margin: 0 0 8px;
+}
+
+.related-video-uploader, .related-video-meta {
+    font-size: 12px;
+    color: #aaa;
+    display: block;
 }
